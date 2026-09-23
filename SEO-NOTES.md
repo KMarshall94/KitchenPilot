@@ -24,7 +24,7 @@ We use one substantive remote/local service page, not duplicate pages with city 
 ## Ongoing work requiring real evidence
 
 1. Review indexing and queries in Search Console once Google has processed the site. Investigate exclusions rather than repeatedly requesting indexing.
-2. Add a named founder biography only after Kirby supplies the public name and verified background to publish.
+2. Kirby confirmed the public name Kirby Marshall and head-chef experience. A concise profile appears on the remote/local page; the decade refers to total restaurant industry experience, not time in the head-chef role.
 3. Add genuine case studies and testimonials only with client permission and substantiated measurements.
 4. Pursue relevant referrals and editorial links through actual professional relationships; do not buy ranking links.
 5. Consider a branded domain for recognition and ownership; it is not an automatic ranking boost. Any migration needs coordinated canonicals, sitemap and redirects.
