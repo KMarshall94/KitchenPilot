@@ -30,3 +30,6 @@ We use one substantive remote/local service page, not duplicate pages with city 
 5. Consider a branded domain for recognition and ownership; it is not an automatic ranking boost. Any migration needs coordinated canonicals, sitemap and redirects.
 6. If considering Google Business Profile, check current eligibility for a service-area business that actually visits customers. Do not list a virtual office or claim a storefront.
 7. Keep the origin-root robots.txt limitation in README in mind. The project sitemap should be submitted directly to Search Console.
+
+A plain-text sitemap.txt mirrors sitemap.xml as a supported Google submission fallback. Keep both URL lists synchronized when adding or removing indexable pages. Initial XML submission returned Couldn't fetch; homepage indexing request was accepted. This does not establish indexing or rankings.
+
