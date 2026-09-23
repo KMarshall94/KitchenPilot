@@ -7,18 +7,20 @@ A lightweight, responsive restaurant consulting website. Plain HTML and CSS; no 
 1. Open this repository's **Settings → Pages**.
 2. Select **Deploy from a branch**, choose **main** and **/(root)**, then Save.
 3. Wait for the Pages deployment to finish. Open **https://kmarshall94.github.io/KitchenPilot/** and enable **Enforce HTTPS** if it is not already enabled.
-4. Complete the form activation below before promoting the website.
+4. Complete the Formspree delivery check below before promoting the website.
 
-## Required one-time form activation
+## Formspree integration and delivery check
 
-The contact page uses [FormSubmit](https://formsubmit.co/documentation), an HTTPS form relay to **kitchenpilotconsulting@gmail.com**. No credentials are stored in the website. The visitor completes FormSubmit's spam check before returning to the thank-you page. Default reCAPTCHA remains enabled, and a hidden honeypot provides another spam filter. There is also a direct email fallback.
+The contact page uses basic HTML POST to **https://formspree.io/f/moevwnzo**, the endpoint supplied by Kirby. This matches the static GitHub Pages stack and works without JavaScript, a build process or credentials. The optional name, required email and required message retain their labels, validation and styling. FormSubmit-only fields have been removed. Formspree handles its confirmation page and any required spam challenge; no custom redirect or paid feature is assumed. The old thanks.html remains available but is not used by this integration.
 
-1. From the **published contact page**, submit a test enquiry using an email address you can check. Complete the spam check.
-2. Open **kitchenpilotconsulting@gmail.com**, check the inbox and spam folder, and follow FormSubmit's activation link. Only the mailbox owner can complete this step.
-3. Submit a **second** test enquiry after activation. Verify delivery, confirm the Reply-To address is the one entered, and confirm the return to `thanks.html`. Do not assume the initial activation submission was delivered as a normal enquiry.
-4. Optional: FormSubmit supplies a random endpoint token after confirmation. Replace the email portion of the form's `action` with that token if desired. The public contact email is still intentionally visible on the site.
+In the Formspree dashboard for this form:
 
-Email delivery has **not** been verified from this development environment. Browser testing intercepted submission without contacting the provider or sending mail. FormSubmit is an external dependency; if delivery fails, check activation/spam and use direct email while investigating. It retains submission archives for 30 days according to its current documentation. Review provider terms/privacy for your business before launch. Never add SMTP credentials or other secrets to this public repository.
+1. Confirm the account email is verified and email notifications are directed to **kitchenpilotconsulting@gmail.com**.
+2. After deployment, submit a test from the published contact page and complete any required spam check.
+3. Confirm the submission appears in the form dashboard, then verify the notification reaches Gmail (including Spam) and that Reply-To matches the submitted email.
+4. If the dashboard receives it but Gmail does not, investigate notification settings/delivery. If it is absent from the dashboard, check the provider response, spam folder in Formspree and any domain restrictions or usage limits.
+
+Browser tests intercept the POST to validate the endpoint and submitted fields without sending email. **Live inbox delivery is not yet verified.** Keep the direct email link as a fallback. Do not put passwords, SMTP credentials or private API keys in the repository. The public form endpoint is expected to be visible.
 
 ## Content and maintenance
 
@@ -36,7 +38,7 @@ Submit `https://kmarshall94.github.io/KitchenPilot/sitemap.xml` in Google Search
 
 **Project-site robots limitation:** search engines read `/robots.txt` at the origin root, not `/KitchenPilot/robots.txt`. This repo includes a deployment-ready file, but it cannot control the origin root. If you also maintain `KMarshall94.github.io`, place or merge the sitemap declaration in that repository's root robots.txt. Otherwise submit the sitemap directly in Search Console; do not rely on the project-level robots file.
 
-If adopting a custom domain, configure it in Pages and update all canonical URLs, `og:url`, `og:image`, JSON-LD URLs, sitemap URLs, robots sitemap declaration, the form `_next` URL and the absolute `/KitchenPilot/` links in `404.html` together. Enable HTTPS and test the form again. Do not add a CNAME until the domain is actually configured.
+If adopting a custom domain, configure it in Pages and update all canonical URLs, `og:url`, `og:image`, JSON-LD URLs, sitemap URLs, robots sitemap declaration, any Formspree redirect/domain settings and the absolute `/KitchenPilot/` links in `404.html` together. Enable HTTPS and test the form again. Do not add a CNAME until the domain is actually configured.
 
 ## Validation performed
 
@@ -49,5 +51,5 @@ Reviewed September 23, 2026:
 - [Google SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide): people-first service copy, descriptive titles, semantic content and crawlable links.
 - [Google title links](https://developers.google.com/search/docs/appearance/title-link): concise, distinct page titles that match visible content.
 - [web.dev form design](https://web.dev/learn/forms/design-basics): visible labels above fields, single-column form, appropriate email keyboard, 16px inputs and generous targets. These informed enquiry usability; no conversion uplift is claimed.
-- [FormSubmit documentation](https://formsubmit.co/documentation) and [help](https://formsubmit.co/help): email activation, Reply-To, absolute return URL and spam protection.
+- [Formspree HTML integration](https://help.formspree.io/articles/building-your-form/building-an-html-form): basic HTML POST with named email and message fields. Replaces the original FormSubmit integration.
 - [GitHub Pages publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site): direct deployment from the main branch root.
