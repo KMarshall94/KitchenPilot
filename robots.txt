@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kmarshall94.github.io/KitchenPilot/sitemap.xml
