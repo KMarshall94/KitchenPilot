@@ -33,3 +33,6 @@ We use one substantive remote/local service page, not duplicate pages with city 
 
 A plain-text sitemap.txt mirrors sitemap.xml as a supported Google submission fallback. Keep both URL lists synchronized when adding or removing indexable pages. Initial XML submission returned Couldn't fetch; homepage indexing request was accepted. This does not establish indexing or rankings.
 
+
+## September 23 expanded resources
+Five additional pages provide profitability analysis, labour/prime-cost analysis, inventory/waste controls, methodology and five functional calculators. The site now has 14 indexable URLs in both sitemap formats. All pages use a native hamburger menu; the homepage remains focused. Calculator inputs stay in the browser. Keep calculators.js and seo.css with the root HTML files. Search Console verification must remain. See the delivered SEO audit for research, limitations and priorities.

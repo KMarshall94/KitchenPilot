@@ -1,6 +1,6 @@
 # Kitchen Pilot Consulting
 
-A lightweight, responsive restaurant consulting website. Plain HTML and CSS; no installation, build process, JavaScript dependency, login or API keys. The repository was empty at the start; the wordmark and favicon interpret the supplied charcoal, muted-gold and off-white brief rather than reproduce an unavailable Facebook logo.
+A lightweight, responsive restaurant consulting website. Plain HTML and CSS with a small local JavaScript file for calculators; no installation, build process, third-party JavaScript dependency, login or API keys. The repository was empty at the start; the wordmark and favicon interpret the supplied charcoal, muted-gold and off-white brief rather than reproduce an unavailable Facebook logo.
 
 ## Publish on GitHub Pages
 
@@ -20,7 +20,7 @@ In the Formspree dashboard for this form:
 3. Confirm the submission appears in the form dashboard, then verify the notification reaches Gmail (including Spam) and that Reply-To matches the submitted email.
 4. If the dashboard receives it but Gmail does not, investigate notification settings/delivery. If it is absent from the dashboard, check the provider response, spam folder in Formspree and any domain restrictions or usage limits.
 
-Browser tests intercept the POST to validate the endpoint and submitted fields without sending email. **Live inbox delivery is not yet verified.** Keep the direct email link as a fallback. Do not put passwords, SMTP credentials or private API keys in the repository. The public form endpoint is expected to be visible.
+Browser tests intercept the POST to validate the endpoint and submitted fields without sending email. Kirby confirmed the Formspree form was working after integration; no new live submission was sent during the SEO update. Keep the direct email link as a fallback. Do not put passwords, SMTP credentials or private API keys in the repository. The public form endpoint is expected to be visible.
 
 ## Content and maintenance
 
@@ -58,3 +58,6 @@ Reviewed September 23, 2026:
 
 See SEO-NOTES.md for the search-intent research, page map, Search Console setup and ongoing work. Six additional service/resource pages use seo.css alongside the original stylesheet. The homepage verification tag must remain in place after Google verification. Local checks cover all page links, unique metadata, lowercase canonicals, JSON-LD syntax and the nine-page sitemap. Responsive checks passed at 320, 768 and 1440 pixels across the homepage, contact and all six new pages.
 
+
+
+The expanded resource library has 14 indexable URLs. A native hamburger menu links the separate pages. Five calculators use calculators.js without transmitting inputs. Publish root HTML files, calculators.js, seo.css and both sitemaps together. See SEO-NOTES.md.
