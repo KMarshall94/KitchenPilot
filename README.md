@@ -53,3 +53,8 @@ Reviewed September 23, 2026:
 - [web.dev form design](https://web.dev/learn/forms/design-basics): visible labels above fields, single-column form, appropriate email keyboard, 16px inputs and generous targets. These informed enquiry usability; no conversion uplift is claimed.
 - [Formspree HTML integration](https://help.formspree.io/articles/building-your-form/building-an-html-form): basic HTML POST with named email and message fields. Replaces the original FormSubmit integration.
 - [GitHub Pages publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site): direct deployment from the main branch root.
+
+## Expanded search content
+
+See SEO-NOTES.md for the search-intent research, page map, Search Console setup and ongoing work. Six additional service/resource pages use seo.css alongside the original stylesheet. The homepage verification tag must remain in place after Google verification. Local checks cover all page links, unique metadata, lowercase canonicals, JSON-LD syntax and the nine-page sitemap. Responsive checks passed at 320, 768 and 1440 pixels across the homepage, contact and all six new pages.
+
